@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             --color-bg: #0a0a0a;
@@ -43,16 +44,12 @@
             animation: fadeInUp 0.8s ease-out 0.1s forwards;
         }
 
-        .hero-number {
-            font-size: clamp(120px, 20vw, 280px);
-            font-weight: 900;
-            line-height: 0.85;
-            letter-spacing: -0.04em;
-            background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2), var(--color-accent-3));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero-logo {
+            width: clamp(200px, 30vw, 400px);
+            height: auto;
             margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.1s forwards;
         }
 
         .hero-title {
@@ -174,6 +171,10 @@
             font-size: 56px;
             margin-bottom: 24px;
             display: block;
+            background: linear-gradient(135deg, var(--accent-color), var(--color-fg));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .platform-name {
@@ -338,7 +339,7 @@
 </head>
 <body>
     <div class="hero">
-        <div class="hero-number">3</div>
+        <img src="logo.svg" alt="Triskly Logo" class="hero-logo">
         <h1 class="hero-title">Triskly</h1>
         <p class="hero-subtitle">Three Wins Productivity</p>
         <p class="hero-description">
@@ -353,7 +354,7 @@
 
     <div class="platforms">
         <div class="platform-card">
-            <span class="platform-icon">🍎</span>
+            <i class="fa-brands fa-apple platform-icon"></i>
             <h2 class="platform-name">macOS</h2>
             <div class="download-options">
                 <a href="#" class="download-btn" id="macos-apple-silicon">
@@ -368,7 +369,7 @@
         </div>
 
         <div class="platform-card">
-            <span class="platform-icon">🪟</span>
+            <i class="fa-brands fa-windows platform-icon"></i>
             <h2 class="platform-name">Windows</h2>
             <div class="download-options">
                 <a href="#" class="download-btn" id="windows-msi">
@@ -383,7 +384,7 @@
         </div>
 
         <div class="platform-card">
-            <span class="platform-icon">🐧</span>
+            <i class="fa-brands fa-linux platform-icon"></i>
             <h2 class="platform-name">Linux</h2>
             <div class="download-options">
                 <a href="#" class="download-btn" id="linux-deb">
